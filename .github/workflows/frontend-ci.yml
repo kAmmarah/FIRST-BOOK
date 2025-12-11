@@ -10,9 +10,6 @@ jobs:
   test:
     name: Test Frontend
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: frontend/book-website
     
     strategy:
       matrix:
@@ -30,14 +27,25 @@ jobs:
         cache-dependency-path: frontend/book-website/package-lock.json
     
     - name: Install dependencies
-      run: npm ci
+      working-directory: frontend/book-website
+      run: |
+        if [ -f package-lock.json ]; then
+          npm ci
+        elif [ -f package.json ]; then
+          npm install
+        else
+          echo "No package files found"
+          exit 1
+        fi
     
     - name: Run linter
+      working-directory: frontend/book-website
       run: |
         # Skip typecheck for now as there's no tsconfig.json
         echo "Skipping typecheck - no tsconfig.json found"
     
     - name: Build
+      working-directory: frontend/book-website
       run: npm run build
 
   deploy:
@@ -51,6 +59,7 @@ jobs:
       uses: actions/checkout@v4
     
     - name: Deploy to Vercel
+      working-directory: frontend/book-website
       run: |
         echo "Skipping Vercel deployment in CI for now"
         echo "Please deploy manually through Vercel dashboard"

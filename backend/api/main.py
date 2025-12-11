@@ -2,10 +2,17 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 import os
 
-from .auth.routes import router as auth_router
-from .chat.routes import router as chat_router
-from .personalization.routes import router as personalization_router
-from .translation.routes import router as translation_router
+try:
+    from .auth.routes import router as auth_router
+    from .chat.routes import router as chat_router
+    from .personalization.routes import router as personalization_router
+    from .translation.routes import router as translation_router
+except ImportError:
+    # Fallback for direct execution
+    from auth.routes import router as auth_router
+    from chat.routes import router as chat_router
+    from personalization.routes import router as personalization_router
+    from translation.routes import router as translation_router
 
 app = FastAPI(
     title="AI Interactive Book API",

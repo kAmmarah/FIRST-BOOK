@@ -10,13 +10,10 @@ jobs:
   test:
     name: Test Backend
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: backend/api
     
     strategy:
       matrix:
-        python-version: [3.10, 3.11]
+        python-version: ['3.10', '3.11']
     
     services:
       postgres:
@@ -47,11 +44,22 @@ jobs:
         python-version: ${{ matrix.python-version }}
     
     - name: Install dependencies
+      working-directory: backend/api
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        if [ -f requirements.txt ]; then
+          pip install -r requirements.txt
+        else
+          echo "requirements.txt not found"
+          exit 1
+        fi
+    
+    - name: Check for syntax errors
+      working-directory: backend/api
+      run: python -m py_compile $(find . -name "*.py" -not -path "./venv/*")
     
     - name: Run tests
+      working-directory: backend/api
       run: |
         # Add test commands here when tests are implemented
         echo "Running tests..."
@@ -61,24 +69,19 @@ jobs:
         SECRET_KEY: test-secret-key
         OPENAI_API_KEY: sk-test-key
         QDRANT_API_KEY: test-qdrant-key
-    
-    - name: Check for syntax errors
-      run: python -m py_compile $(find . -name "*.py" -not -path "./venv/*")
 
   deploy:
     name: Deploy Backend
     needs: test
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main'
-    defaults:
-      run:
-        working-directory: backend/api
     
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
     
     - name: Deploy to hosting platform
+      working-directory: backend/api
       run: |
         echo "Deploying backend to hosting platform..."
         # Add deployment commands here based on chosen hosting platform
