@@ -60,11 +60,11 @@ const config = {
     ],
   ],
 
-  scripts: [    {
-      src: '/scripts/chatWidgetLoader.js',
-      async: true,
-    },
-  ],
+  // scripts: [    {
+  //     src: '/scripts/chatWidgetLoader.js',
+  //     async: true,
+  //   },
+  // ],
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({

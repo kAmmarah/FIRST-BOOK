@@ -39,12 +39,6 @@ export default {
       }
     ]
   ],
-  "scripts": [
-    {
-      "src": "/scripts/chatWidgetLoader.js",
-      "async": true
-    }
-  ],
   "themeConfig": {
     "image": "img/docusaurus-social-card.jpg",
     "navbar": {
@@ -341,6 +335,7 @@ export default {
   "customFields": {},
   "plugins": [],
   "themes": [],
+  "scripts": [],
   "headTags": [],
   "stylesheets": [],
   "clientModules": [],
