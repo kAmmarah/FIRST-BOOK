@@ -84,5 +84,4 @@ jobs:
       working-directory: backend/api
       run: |
         echo "Deploying backend to hosting platform..."
-        # Add deployment commands here based on chosen hosting platform
-        # This will depend on where you decide to deploy your backend
+        echo "For production deployment, add your specific deployment commands here"

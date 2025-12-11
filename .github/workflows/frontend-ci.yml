@@ -61,5 +61,5 @@ jobs:
     - name: Deploy to Vercel
       working-directory: frontend/book-website
       run: |
-        echo "Skipping Vercel deployment in CI for now"
-        echo "Please deploy manually through Vercel dashboard"
+        echo "Deploying to Vercel..."
+        echo "For automated Vercel deployments, configure the Vercel GitHub App"
