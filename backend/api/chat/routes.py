@@ -1,9 +1,15 @@
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
-from ..database import get_db
-from . import models, service
-from ..auth.models import UserResponse
-from ..utils.auth import get_current_user
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database import get_db
+from chat import models, service
+from auth.models import UserResponse
+from utils.auth import get_current_user
 
 router = APIRouter()
 

@@ -1,8 +1,14 @@
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..database import get_db
-from . import models, service
-from ..utils.auth import create_access_token, get_current_user
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database import get_db
+from auth import models, service
+from utils.auth import create_access_token, get_current_user
 
 router = APIRouter()
 

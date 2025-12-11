@@ -1,6 +1,12 @@
 from sqlalchemy.orm import Session
-from ..database.models import User
-from ..ai.openai_service import get_openai_response
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database.models import User
+from ai.openai_service import get_openai_response
 
 def personalize_chapter_content(db: Session, user_id: int, content: str):
     # Get user profile for personalization

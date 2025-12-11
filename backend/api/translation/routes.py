@@ -1,5 +1,11 @@
 from fastapi import APIRouter
-from . import models, service
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from translation import models, service
 
 router = APIRouter()
 

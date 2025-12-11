@@ -4,15 +4,15 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Initialize OpenAI client
-client = openai.OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+# Set OpenAI API key
+openai.api_key = os.getenv("OPENAI_API_KEY")
 
 def get_openai_response(system_prompt: str, user_prompt: str, model: str = "gpt-3.5-turbo") -> str:
     """
     Get a response from OpenAI's API
     """
     try:
-        response = client.chat.completions.create(
+        response = openai.ChatCompletion.create(
             model=model,
             messages=[
                 {"role": "system", "content": system_prompt},
@@ -31,7 +31,7 @@ def get_embedding(text: str, model: str = "text-embedding-ada-002") -> list:
     Get embeddings for text using OpenAI's embedding API
     """
     try:
-        response = client.embeddings.create(
+        response = openai.Embedding.create(
             input=text,
             model=model
         )

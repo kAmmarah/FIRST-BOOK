@@ -3,10 +3,15 @@ from typing import Optional
 from jose import JWTError, jwt
 from fastapi import Depends, HTTPException, status
 from sqlalchemy.orm import Session
-from ..database import get_db
-from ..auth import models, service
+import sys
 import os
 from dotenv import load_dotenv
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database import get_db
+from auth import models, service
 
 load_dotenv()
 

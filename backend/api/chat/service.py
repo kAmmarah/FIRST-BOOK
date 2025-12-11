@@ -1,7 +1,13 @@
 from sqlalchemy.orm import Session
-from ..database.models import ChatLog
-from ..ai.openai_service import get_openai_response
-from ..database.models import User
+import sys
+import os
+
+# Add the parent directory to the Python path
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from database.models import ChatLog
+from ai.openai_service import get_openai_response
+from database.models import User
 
 def process_chat_query(db: Session, user_id: int, query: str, context: str = None):
     # Get user profile for personalization
