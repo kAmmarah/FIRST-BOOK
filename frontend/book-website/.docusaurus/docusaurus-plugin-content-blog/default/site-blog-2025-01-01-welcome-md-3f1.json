@@ -5,17 +5,19 @@
   "title": "Welcome to Our AI Learning Platform",
   "description": "Welcome to our innovative AI-powered learning platform! We're excited to introduce a new way of learning that adapts to your needs, preferences, and goals.",
   "date": "2025-01-01T00:00:00.000Z",
-  "formattedDate": "January 1, 2025",
   "tags": [
     {
+      "inline": true,
       "label": "ai",
       "permalink": "/blog/tags/ai"
     },
     {
+      "inline": true,
       "label": "education",
       "permalink": "/blog/tags/education"
     },
     {
+      "inline": true,
       "label": "personalization",
       "permalink": "/blog/tags/personalization"
     }
@@ -28,7 +30,8 @@
       "title": "creators of the Physical AI & Humanoid Robotics Course",
       "url": "https://github.com/kAmmarah",
       "imageURL": "/img/logo.svg",
-      "key": "ai-team"
+      "key": "ai-team",
+      "page": null
     }
   ],
   "frontMatter": {

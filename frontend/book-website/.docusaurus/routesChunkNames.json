@@ -1,8 +1,8 @@
 {
-  "/blog-ac1": {
+  "/blog-df4": {
     "__comp": "a6aa9e1f",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
@@ -10,27 +10,38 @@
         "content": "019c0c06"
       }
     ],
-    "metadata": "b2b675dd"
+    "__props": "c15d9823"
   },
-  "/blog/archive-64e": {
+  "/blog/archive-182": {
     "__comp": "9e4087bc",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
-    "archive": "b2f554cd"
+    "__props": "f81c1134"
   },
-  "/blog/tags-a1a": {
+  "/blog/authors-0b7": {
+    "__comp": "621db11d",
+    "__context": {
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
+    },
+    "sidebar": "814f3328",
+    "__props": "ef8b811a"
+  },
+  "/blog/tags-287": {
     "__comp": "01a85c17",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
-    "tags": "a7023ddc"
+    "__props": "3a2db09e"
   },
-  "/blog/tags/ai-233": {
+  "/blog/tags/ai-90f": {
     "__comp": "6875c492",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
@@ -38,13 +49,12 @@
         "content": "019c0c06"
       }
     ],
-    "tag": "f32fe326",
-    "listMetadata": "ab4c6d72"
+    "__props": "65a6d713"
   },
-  "/blog/tags/education-623": {
+  "/blog/tags/education-57a": {
     "__comp": "6875c492",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
@@ -52,13 +62,12 @@
         "content": "019c0c06"
       }
     ],
-    "tag": "e175f9f3",
-    "listMetadata": "f77b4e82"
+    "__props": "12ef0105"
   },
-  "/blog/tags/personalization-72e": {
+  "/blog/tags/personalization-cc0": {
     "__comp": "6875c492",
     "__context": {
-      "plugin": "775110da"
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "items": [
@@ -66,42 +75,44 @@
         "content": "019c0c06"
       }
     ],
-    "tag": "d73e75b6",
-    "listMetadata": "59151ec8"
+    "__props": "affebfbd"
   },
-  "/blog/welcome-4b3": {
+  "/blog/welcome-bbd": {
     "__comp": "ccc49370",
     "__context": {
-      "plugin": "775110da"
+      "data": {
+        "blogMetadata": "acecf23e"
+      },
+      "plugin": "36994c47"
     },
     "sidebar": "814f3328",
     "content": "3f11435e"
   },
-  "/docs-033": {
+  "/docs-a89": {
     "__comp": "5e95c892",
     "__context": {
-      "plugin": "d02553dc"
+      "plugin": "aba21aa0"
     }
   },
-  "/docs-a44": {
+  "/docs-4ca": {
     "__comp": "a7bd4aaa",
-    "version": "935f2afb"
+    "__props": "0058b4c6"
   },
-  "/docs-a61": {
+  "/docs-4ab": {
     "__comp": "a94703ab"
   },
-  "/docs/chapter1-b63": {
+  "/docs/chapter1-397": {
     "__comp": "17896441",
     "content": "3525060d"
   },
-  "/docs/intro-aed": {
+  "/docs/intro-61d": {
     "__comp": "17896441",
     "content": "0e384e19"
   },
-  "/-480": {
+  "/-2e1": {
     "__comp": "c4f5d8e4",
     "__context": {
-      "plugin": "ec293dff"
+      "plugin": "a7456010"
     },
     "config": "5e9f5e1a"
   }
