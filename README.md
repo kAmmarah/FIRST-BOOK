@@ -127,6 +127,7 @@ Detailed documentation is available in the `docs/` directory:
 - [Testing Procedures](docs/testing.md)
 - [CI/CD Setup Guide](docs/ci-cd-setup.md)
 - [Public Deployment Guide](docs/public-deployment.md)
+- [Vercel Deployment Fix Guide](docs/vercel-deployment-fix.md)
 
 ## Contributing
 
