@@ -41,3 +41,11 @@ htmlcov/
 # System files
 .Trash/
 .Library/
+
+# Docusaurus build files
+.docusaurus/
+frontend/book-website/.docusaurus/
+
+# Database files
+*.db
+test.db
