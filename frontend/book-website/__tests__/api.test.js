@@ -1,6 +1,6 @@
 // Test for Vercel API functions
 const { createMocks } = require('node-mocks-http');
-const healthHandler = require('../api/health').default;
+const healthHandler = require('../api/health');
 
 describe('API Tests', () => {
   test('Health check endpoint returns correct status', async () => {
