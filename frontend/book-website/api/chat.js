@@ -1,27 +1,6 @@
 // Vercel Serverless Function for Chat API
 
-async function handler(req, res) {
-  if (req.method === 'POST') {
-    try {
-      // Parse the request body
-      const { query, context } = req.body;
-      
-      // In a real implementation, this would call your actual chat service
-      // For now, we'll return a mock response
-      const response = {
-        response: `This is a mock response to your question: '${query}'. In a production environment, this would be answered by an AI model.`
-      };
-      
-      res.status(200).json(response);
-    } catch (error) {
-      res.status(500).json({ error: 'Internal server error' });
-    }
-  } else {
-    res.status(405).json({ error: 'Method not allowed' });
-  }
-}
-
-module.exports = handler;
+export default async function handler(req, res) {
   if (req.method === 'POST') {
     try {
       // Parse the request body
